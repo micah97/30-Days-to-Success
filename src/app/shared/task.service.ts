@@ -3,7 +3,7 @@ import { Http, Headers } from '@angular/http';
 import { Injectable } from '@angular/core';
 import 'rxjs/add/operator/map';
 
-const TASK_URL = 'http://192.168.1.18:3000/tasks/';
+const TASK_URL = 'http://localhost:3000/tasks/';
 const HEADER = { headers: new Headers({ 'Content-Type': 'application/json' }) };
 
 @Injectable()
