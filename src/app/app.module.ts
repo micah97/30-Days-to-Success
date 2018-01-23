@@ -1,11 +1,14 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { MatStepperModule } from '@angular/material/stepper';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { FormBuilder, FormGroup, FormsModule, Validators } from '@angular/forms';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material';
+import { MatButtonModule } from '@angular/material/button';
+import { MatCardModule } from '@angular/material/card';
 
 @NgModule({
   declarations: [
@@ -14,8 +17,12 @@ import { FormBuilder, FormGroup, FormsModule, Validators } from '@angular/forms'
   ],
   imports: [
     BrowserModule,
+    MatCardModule,
     BrowserAnimationsModule,
-    FormsModule,
+    MatFormFieldModule,
+    MatButtonModule,
+    HttpModule,
+    MatInputModule,
     MatStepperModule
   ],
   providers: [],
