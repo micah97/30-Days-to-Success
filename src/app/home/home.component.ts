@@ -18,10 +18,9 @@ export class HomeComponent implements OnInit {
   }
 
   showTasks(): void {
-    this.tasksService.loadTasks()
+    this.tasksService.getTasks()
       .subscribe(tasks => {
         this.tasks = tasks;
       });
   }
-
 }

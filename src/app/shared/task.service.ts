@@ -1,17 +1,17 @@
 import { Task } from './task.model';
-import { Http, Headers } from '@angular/http';
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs/';
 import 'rxjs/add/operator/map';
-
-const TASK_URL = 'http://localhost:3000/tasks/';
-const HEADER = { headers: new Headers({ 'Content-Type': 'application/json' }) };
 
 @Injectable()
 export class TasksService {
-  constructor(private http: Http) {}
+  constructor(private http: HttpClient) { }
 
-  loadTasks() {
-    return this.http.get(TASK_URL)
-      .map(res => res.json());
+  private tasksUrl = 'assets/db.json';
+
+  getTasks(): Observable<Task[]> {
+    return this.http.get<Task[]>(this.tasksUrl)
+      .map((res: any) => res.tasks);
   }
 }
