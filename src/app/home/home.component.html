@@ -1,12 +1,12 @@
 <mat-card>
 
 <mat-vertical-stepper>
-  <mat-step *ngFor="let task of tasks">
+  <mat-step [completed]="false" *ngFor="let task of tasks">
     <ng-template class="title" matStepLabel>{{task.title}}</ng-template>
-    <div class="what-why-title">What to do</div>
+    <div class="what-why-title"><i class="material-icons lightbulb">grade</i>What to do</div>
     <hr>
     <div class="what">{{task.what}}</div>
-    <div class="what-why-title">Why you should do this</div>
+    <div class="what-why-title"><i class="material-icons lightbulb">lightbulb_outline</i>Why you should do this</div>
     <hr>
     <div class="why">{{task.why}}</div>
   </mat-step>

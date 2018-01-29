@@ -10,6 +10,10 @@ import { MatInputModule } from '@angular/material';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { HttpClientModule } from '@angular/common/http';
+import { MatIconModule} from '@angular/material/icon';
+import { MatTooltipModule } from '@angular/material/tooltip';
+
+
 
 @NgModule({
   declarations: [
@@ -21,6 +25,8 @@ import { HttpClientModule } from '@angular/common/http';
     MatCardModule,
     BrowserAnimationsModule,
     MatFormFieldModule,
+    MatTooltipModule,
+    MatIconModule,
     MatButtonModule,
     HttpModule,
     HttpClientModule,
