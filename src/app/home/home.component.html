@@ -1,18 +1,49 @@
-<mat-card>
+<mat-accordion class="example-headers-align">
+  <mat-expansion-panel [expanded]="step === 0" (opened)="setStep(0)" hideToggle="true">
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        Thirty Days to Success
+      </mat-panel-title>
 
-<mat-vertical-stepper>
-  <mat-step [completed]="false" *ngFor="let task of tasks">
-    <ng-template class="title" matStepLabel>{{task.title}}</ng-template>
-    <div class="what-why-title"><i class="material-icons lightbulb">grade</i>What to do</div>
-    <hr>
-    <div class="what">{{task.what}}</div>
-    <div class="what-why-title"><i class="material-icons lightbulb">lightbulb_outline</i>Why you should do this</div>
-    <hr>
-    <div class="what">{{task.why}}</div>
-    <div class="what-why-title"><i class="material-icons lightbulb">show_chart</i>What to expect</div>
-    <hr>
-    <div class="why">{{task.results}}</div>
-  </mat-step>
-</mat-vertical-stepper>
+    </mat-expansion-panel-header>
 
-</mat-card>
+    <hr class="intro-line"><br>
+
+    <p>My name is <a target="_blank" href="www.troytheall.com/">Troy Theall</a>, 623-217-6530.  I’ve been in Real Estate for over 16 years.  I’ve been a full time agent for 13 years (I spent the first three years of my professional career teaching elementary school and selling real estate part time).  I’ve sold over 500 homes in my career averaging roughly 30 home sales per year.  My brokerage is West USA Realty in Phoenix, AZ and I currently work independently as a licensed sales representative.  I have never worked on a team nor do I have any team members.  I am the front, middle, and back end of my business.</p>
+
+    <p>Through my years in real estate, I’ve created a system that works for me and has continued to produce sales year after year.  I have built the foundation of my business with the principals and steps I will outline for you in the next 30 days.  I’ve created this app to give you a 30 day business plan to follow, help you build a foundation for your business, and develop strategies and resources that will continue producing results for your business for years to come.</p>
+
+    <p>After making the decision to grow your business and purchase this app you will receive 1 real estate specific task per day for 30 days.  Each task you receive will explain; what to do, why you should do it, and what results you should expect by completing the task.  As a newly licensed agent or even a seasoned veteran one of the most difficult aspects of our profession is to have a plan every day and consistently follow a plan day in and day out.  My app will plan 30 days of activities and tasks for you to perform, complete, and repeat.  If you complete all 30 tasks, I’m confident you will have at least one new client (most likely several) by the 30th day of the program.  However, following this program is just like following a diet or workout routine.  It’s only going to work if you follow it step by step and commit yourself to the strategies and actions presented!</p>
+
+  </mat-expansion-panel>
+
+
+
+<mat-expansion-panel [expanded]="step === 1" (opened)="setStep(1)" hideToggle="true">
+
+  <mat-expansion-panel-header>
+    <mat-panel-title>
+      The Thirty Tasks
+    </mat-panel-title>
+  </mat-expansion-panel-header>
+
+  <hr class="intro-line"><br>
+
+  <mat-vertical-stepper>
+    <mat-step [completed]="false" *ngFor="let task of tasks">
+      <ng-template class="title" matStepLabel>{{task.title}}</ng-template>
+      <div class="what-why-title"><i class="material-icons lightbulb">grade</i>What to do</div>
+      <hr class="divider-line">
+      <div class="what">{{task.what}}</div>
+      <div class="what-why-title"><i class="material-icons lightbulb">lightbulb_outline</i>Why you should do this</div>
+      <hr class="divider-line">
+      <div class="what">{{task.why}}</div>
+      <div class="what-why-title"><i class="material-icons lightbulb">show_chart</i>What to expect</div>
+      <hr class="divider-line">
+      <div class="why">{{task.results}}</div>
+    </mat-step>
+  </mat-vertical-stepper>
+
+</mat-expansion-panel>
+
+</mat-accordion>

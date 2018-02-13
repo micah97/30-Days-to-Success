@@ -9,12 +9,17 @@ import { TasksService, Task } from '../shared';
 })
 export class HomeComponent implements OnInit {
   tasks: Task[];
+  step = 0;
 
 
   constructor(private tasksService: TasksService) { }
 
   ngOnInit() {
     this.showTasks();
+  }
+
+  setStep(index: number) {
+    this.step = index;
   }
 
   showTasks(): void {
